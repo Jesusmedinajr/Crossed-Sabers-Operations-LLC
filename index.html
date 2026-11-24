@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[Company Name] | General Contracting & Project Management</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://jsdelivr.net" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://jsdelivr.net" rel="stylesheet">
+  <style>
+    :root {
+      --brand-navy: #0f243e;
+      --brand-amber: #f59e0b;
+      --brand-amber-hover: #d97706;
+    }
+    body {
+      scroll-behavior: smooth;
+      color: #1e293b;
+    }
+    .bg-navy {
+      background-color: var(--brand-navy) !important;
+    }
+    .text-navy {
+      color: var(--brand-navy) !important;
+    }
+    .btn-amber {
+      background-color: var(--brand-amber);
+      border-color: var(--brand-amber);
+      color: #0f172a;
+      font-weight: 600;
+    }
+    .btn-amber:hover {
+      background-color: var(--brand-amber-hover);
+      border-color: var(--brand-amber-hover);
+      color: #0f172a;
+    }
+    .hero-section {
+      background: linear-gradient(rgba(15, 36, 62, 0.85), rgba(15, 36, 62, 0.85)),
+                  url('https://unsplash.com') center/cover no-repeat;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+    }
+    .service-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border-top: 4px solid var(--brand-amber);
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+    }
+    .icon-box {
+      width: 56px;
+      height: 56px;
+      background-color: rgba(245, 158, 11, 0.15);
+      color: var(--brand-amber-hover);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-navy sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+        <i class="bi bi-building-gear text-warning me-2 fs-4"></i>
+        <span>[COMPANY NAME]</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-amber px-4" href="#contact">Request a Quote</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section text-white">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-8">
+          <span class="badge bg-warning text-dark text-uppercase fw-bold px-3 py-2 mb-3">
+            <i class="bi bi-shield-check me-1"></i> Veteran-Owned & Operated
+          </span>
+          <h1 class="display-4 fw-bold mb-3">Disciplined General Contracting & Project Management</h1>
+          <p class="lead text-light mb-4">
+            Delivering reliable residential renovations, light-commercial build-outs, and structured project oversight across Jacksonville, St. Augustine, and Northeast Florida.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#contact" class="btn btn-amber btn-lg px-4">Get a Free Estimate</a>
+            <a href="#services" class="btn btn-outline-light btn-lg px-4">Explore Services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Trust / Key Pillars Strip -->
+  <section class="bg-light border-bottom py-4">
+    <div class="container">
+      <div class="row g-4 text-center">
+        <div class="col-md-4">
+          <div class="fw-bold text-navy"><i class="bi bi-check-circle-fill text-warning me-2"></i>Licensed & Insured Partners</div>
+          <small class="text-muted">Vetted Florida trade specialists on every job</small>
+        </div>
+        <div class="col-md-4">
+          <div class="fw-bold text-navy"><i class="bi bi-calendar-check-fill text-warning me-2"></i>On-Schedule Execution</div>
+          <small class="text-muted">Milestone-driven project management</small>
+        </div>
+        <div class="col-md-4">
+          <div class="fw-bold text-navy"><i class="bi bi-file-earmark-text-fill text-warning me-2"></i>Transparent Estimates</div>
+          <small class="text-muted">Clear scopes of work with zero guesswork</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-5">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-navy">Our Core Services</h2>
+        <p class="text-muted mx-auto" style="max-width: 600px;">
+          End-to-end execution from initial pre-construction planning and permitting through final punch-list completion.
+        </p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm service-card p-3">
+            <div class="card-body">
+              <div class="icon-box mb-3"><i class="bi bi-house-door"></i></div>
+              <h5 class="card-title fw-bold text-navy">Residential Remodeling</h5>
+              <p class="card-text text-muted">
+                Full-scope kitchen, bathroom, and whole-home interior renovations built to modern Florida building codes.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm service-card p-3">
+            <div class="card-body">
+              <div class="icon-box mb-3"><i class="bi bi-building"></i></div>
+              <h5 class="card-title fw-bold text-navy">Commercial Build-Outs</h5>
+              <p class="card-text text-muted">
+                Tenant improvements, office reconfigurations, and facility upgrades delivered on budget and on schedule.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm service-card p-3">
+            <div class="card-body">
+              <div class="icon-box mb-3"><i class="bi bi-kanban"></i></div>
+              <h5 class="card-title fw-bold text-navy">Project Management</h5>
+              <p class="card-text text-muted">
+                Subcontractor scheduling, vendor procurement, site inspections, and quality assurance for complex builds.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-5 bg-light">
+    <div class="container py-4">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <img src="https://unsplash.com" alt="Construction planning" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-lg-6">
+          <span class="text-uppercase fw-bold text-warning small">About Our Company</span>
+          <h2 class="fw-bold text-navy mt-1 mb-3">Military Precision Applied to Construction</h2>
+          <p class="text-muted">
+            Based in Northeast Florida, <strong>[Company Name]</strong> was built on the principle that construction projects succeed through proactive communication, strict accountability, and disciplined execution.
+          </p>
+          <p class="text-muted mb-4">
+            Whether managing a residential remodel, a commercial tenant build-out, or a government facility task order, we coordinate licensed trades and suppliers to protect your timeline and bottom line.
+          </p>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="bi bi-check2-square text-warning me-2 fw-bold"></i> Detailed upfront line-item scopes & estimates</li>
+            <li class="mb-2"><i class="bi bi-check2-square text-warning me-2 fw-bold"></i> Dedicated single point of contact from start to finish</li>
+            <li class="mb-2"><i class="bi bi-check2-square text-warning me-2 fw-bold"></i> Strict adherence to OSHA safety & Florida code standards</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Placeholder -->
+  <section id="projects" class="py-5">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-navy">Capabilities & Focus Areas</h2>
+        <p class="text-muted">Serving homeowners, commercial property managers, and municipal partners.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100">
+            <img src="https://unsplash.com" class="card-img-top" alt="Interior Renovation">
+            <div class="card-body">
+              <span class="badge bg-navy mb-2">Residential</span>
+              <h5 class="card-title fw-bold">Interior & Structural Renovations</h5>
+              <p class="card-text text-muted small">Kitchens, baths, flooring, framing, and full home modernizations.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100">
