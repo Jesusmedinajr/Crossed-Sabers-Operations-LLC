@@ -3,222 +3,493 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>[Company Name] | General Contracting & Project Management</title>
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://jsdelivr.net" rel="stylesheet">
-  <!-- Bootstrap Icons -->
-  <link href="https://jsdelivr.net" rel="stylesheet">
+  <title>Cross Sabers Solutions LLC | General Contracting & Project Management</title>
   <style>
     :root {
-      --brand-navy: #0f243e;
-      --brand-amber: #f59e0b;
-      --brand-amber-hover: #d97706;
+      --brand-dark: #14181f;
+      --brand-navy: #1c2431;
+      --brand-crimson: #8b1116;
+      --brand-gold: #d4af37;
+      --brand-gold-hover: #b89426;
+      --text-dark: #1e293b;
+      --text-muted: #475569;
+      --bg-light: #f8fafc;
     }
-    body {
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
       scroll-behavior: smooth;
-      color: #1e293b;
     }
-    .bg-navy {
-      background-color: var(--brand-navy) !important;
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text-dark);
+      line-height: 1.6;
+      background-color: #ffffff;
     }
-    .text-navy {
-      color: var(--brand-navy) !important;
+
+    a {
+      text-decoration: none;
+      color: inherit;
     }
-    .btn-amber {
-      background-color: var(--brand-amber);
-      border-color: var(--brand-amber);
-      color: #0f172a;
-      font-weight: 600;
+
+    .container {
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
-    .btn-amber:hover {
-      background-color: var(--brand-amber-hover);
-      border-color: var(--brand-amber-hover);
-      color: #0f172a;
+
+    /* Navigation */
+    .navbar {
+      background-color: var(--brand-dark);
+      color: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 2px solid var(--brand-gold);
+      padding: 14px 0;
     }
-    .hero-section {
-      background: linear-gradient(rgba(15, 36, 62, 0.85), rgba(15, 36, 62, 0.85)),
-                  url('https://unsplash.com') center/cover no-repeat;
-      min-height: 80vh;
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .brand {
       display: flex;
       align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: 0.5px;
+      color: #ffffff;
     }
-    .service-card {
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      border-top: 4px solid var(--brand-amber);
+
+    .nav-logo {
+      height: 44px;
+      width: auto;
+      background: #ffffff;
+      padding: 3px 6px;
+      border-radius: 4px;
     }
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
     }
-    .icon-box {
-      width: 56px;
-      height: 56px;
-      background-color: rgba(245, 158, 11, 0.15);
-      color: var(--brand-amber-hover);
-      display: inline-flex;
+
+    .nav-links a {
+      color: #e2e8f0;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--brand-gold);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: 2px solid transparent;
+      text-align: center;
+    }
+
+    .btn-gold {
+      background-color: var(--brand-gold);
+      color: var(--brand-dark);
+      border-color: var(--brand-gold);
+    }
+
+    .btn-gold:hover {
+      background-color: var(--brand-gold-hover);
+      border-color: var(--brand-gold-hover);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: #ffffff;
+      border-color: #ffffff;
+    }
+
+    .btn-outline:hover {
+      background-color: #ffffff;
+      color: var(--brand-dark);
+    }
+
+    .btn-sm {
+      padding: 8px 18px;
+      font-size: 0.9rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: radial-gradient(circle at top right, #263142 0%, var(--brand-dark) 65%);
+      color: #ffffff;
+      padding: 75px 0;
+      border-bottom: 4px solid var(--brand-crimson);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: var(--brand-crimson);
+      color: #ffffff;
+      border: 1px solid var(--brand-gold);
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: 2.75rem;
+      line-height: 1.18;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      font-size: 1.12rem;
+      color: #cbd5e1;
+      margin-bottom: 28px;
+      max-width: 620px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .hero-logo-wrap {
+      text-align: center;
+    }
+
+    .hero-logo {
+      max-width: 270px;
+      width: 100%;
+      background: #ffffff;
+      padding: 16px;
+      border-radius: 12px;
+      border: 3px solid var(--brand-gold);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+    }
+
+    /* Trust Strip */
+    .trust-strip {
+      background-color: var(--bg-light);
+      border-bottom: 1px solid #e2e8f0;
+      padding: 24px 0;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .trust-item strong {
+      display: block;
+      color: var(--brand-dark);
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .trust-item span {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    /* Sections */
+    .section {
+      padding: 70px 0;
+    }
+
+    .section-bg {
+      background-color: var(--bg-light);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 660px;
+      margin: 0 auto 48px;
+    }
+
+    .section-header h2 {
+      font-size: 2.1rem;
+      color: var(--brand-dark);
+      margin-bottom: 12px;
+      font-weight: 800;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    /* Cards Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 28px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      border: 1px solid #e2e8f0;
+      border-top: 4px solid var(--brand-crimson);
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      background-color: rgba(139, 17, 22, 0.1);
+      color: var(--brand-crimson);
+      border-radius: 8px;
+      display: flex;
       align-items: center;
       justify-content: center;
+      font-weight: 800;
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      color: var(--brand-dark);
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* About Section */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .about-box {
+      background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand-navy) 100%);
+      color: #ffffff;
+      padding: 36px;
+      border-radius: 10px;
+      border-left: 6px solid var(--brand-gold);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .about-box h3 {
+      color: var(--brand-gold);
+      margin-bottom: 14px;
+      font-size: 1.4rem;
+    }
+
+    .about-box p {
+      color: #e2e8f0;
+      margin-bottom: 16px;
+    }
+
+    .eyebrow {
+      color: var(--brand-crimson);
+      font-weight: 800;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .about-content h2 {
+      font-size: 2rem;
+      color: var(--brand-dark);
+      margin-bottom: 16px;
+    }
+
+    .about-content p {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .checklist {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .checklist li {
+      padding: 8px 0;
+      font-weight: 600;
+      color: var(--brand-dark);
+    }
+
+    .checklist li::before {
+      content: "✓ ";
+      color: var(--brand-crimson);
+      font-weight: 900;
+      margin-right: 8px;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      background-color: var(--brand-dark);
+      color: #ffffff;
+      padding: 70px 0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 48px;
+    }
+
+    .contact-info h2 {
+      font-size: 2.1rem;
+      margin-bottom: 14px;
+    }
+
+    .contact-info > p {
+      color: #cbd5e1;
+      margin-bottom: 28px;
+    }
+
+    .info-row {
+      margin-bottom: 20px;
+    }
+
+    .info-row strong {
+      display: block;
+      color: var(--brand-gold);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .info-row span, .info-row a {
+      font-size: 1.05rem;
+      color: #ffffff;
+    }
+
+    .form-card {
+      background: #ffffff;
+      color: var(--text-dark);
+      padding: 32px;
       border-radius: 8px;
-      font-size: 1.5rem;
+      border-top: 4px solid var(--brand-gold);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 0.95rem;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--brand-crimson);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #0b0e12;
+      color: #94a3b8;
+      text-align: center;
+      padding: 28px 0;
+      border-top: 1px solid #1e293b;
+      font-size: 0.9rem;
+    }
+
+    footer strong {
+      color: #ffffff;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    /* Responsive */
+    @media (max-width: 860px) {
+      .hero-grid,
+      .cards-grid,
+      .about-grid,
+      .contact-grid,
+      .trust-grid,
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 2.1rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
     }
   </style>
 </head>
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-navy sticky-top shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
-        <i class="bi bi-building-gear text-warning me-2 fs-4"></i>
-        <span>[COMPANY NAME]</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item ms-lg-3">
-            <a class="btn btn-amber px-4" href="#contact">Request a Quote</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <header class="hero-section text-white">
-    <div class="container py-5">
-      <div class="row">
-        <div class="col-lg-8">
-          <span class="badge bg-warning text-dark text-uppercase fw-bold px-3 py-2 mb-3">
-            <i class="bi bi-shield-check me-1"></i> Veteran-Owned & Operated
-          </span>
-          <h1 class="display-4 fw-bold mb-3">Disciplined General Contracting & Project Management</h1>
-          <p class="lead text-light mb-4">
-            Delivering reliable residential renovations, light-commercial build-outs, and structured project oversight across Jacksonville, St. Augustine, and Northeast Florida.
-          </p>
-          <div class="d-flex flex-wrap gap-3">
-            <a href="#contact" class="btn btn-amber btn-lg px-4">Get a Free Estimate</a>
-            <a href="#services" class="btn btn-outline-light btn-lg px-4">Explore Services</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Trust / Key Pillars Strip -->
-  <section class="bg-light border-bottom py-4">
-    <div class="container">
-      <div class="row g-4 text-center">
-        <div class="col-md-4">
-          <div class="fw-bold text-navy"><i class="bi bi-check-circle-fill text-warning me-2"></i>Licensed & Insured Partners</div>
-          <small class="text-muted">Vetted Florida trade specialists on every job</small>
-        </div>
-        <div class="col-md-4">
-          <div class="fw-bold text-navy"><i class="bi bi-calendar-check-fill text-warning me-2"></i>On-Schedule Execution</div>
-          <small class="text-muted">Milestone-driven project management</small>
-        </div>
-        <div class="col-md-4">
-          <div class="fw-bold text-navy"><i class="bi bi-file-earmark-text-fill text-warning me-2"></i>Transparent Estimates</div>
-          <small class="text-muted">Clear scopes of work with zero guesswork</small>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="py-5">
-    <div class="container py-4">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold text-navy">Our Core Services</h2>
-        <p class="text-muted mx-auto" style="max-width: 600px;">
-          End-to-end execution from initial pre-construction planning and permitting through final punch-list completion.
-        </p>
-      </div>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 border-0 shadow-sm service-card p-3">
-            <div class="card-body">
-              <div class="icon-box mb-3"><i class="bi bi-house-door"></i></div>
-              <h5 class="card-title fw-bold text-navy">Residential Remodeling</h5>
-              <p class="card-text text-muted">
-                Full-scope kitchen, bathroom, and whole-home interior renovations built to modern Florida building codes.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 border-0 shadow-sm service-card p-3">
-            <div class="card-body">
-              <div class="icon-box mb-3"><i class="bi bi-building"></i></div>
-              <h5 class="card-title fw-bold text-navy">Commercial Build-Outs</h5>
-              <p class="card-text text-muted">
-                Tenant improvements, office reconfigurations, and facility upgrades delivered on budget and on schedule.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 border-0 shadow-sm service-card p-3">
-            <div class="card-body">
-              <div class="icon-box mb-3"><i class="bi bi-kanban"></i></div>
-              <h5 class="card-title fw-bold text-navy">Project Management</h5>
-              <p class="card-text text-muted">
-                Subcontractor scheduling, vendor procurement, site inspections, and quality assurance for complex builds.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="py-5 bg-light">
-    <div class="container py-4">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <img src="https://unsplash.com" alt="Construction planning" class="img-fluid rounded shadow">
-        </div>
-        <div class="col-lg-6">
-          <span class="text-uppercase fw-bold text-warning small">About Our Company</span>
-          <h2 class="fw-bold text-navy mt-1 mb-3">Military Precision Applied to Construction</h2>
-          <p class="text-muted">
-            Based in Northeast Florida, <strong>[Company Name]</strong> was built on the principle that construction projects succeed through proactive communication, strict accountability, and disciplined execution.
-          </p>
-          <p class="text-muted mb-4">
-            Whether managing a residential remodel, a commercial tenant build-out, or a government facility task order, we coordinate licensed trades and suppliers to protect your timeline and bottom line.
-          </p>
-          <ul class="list-unstyled">
-            <li class="mb-2"><i class="bi bi-check2-square text-warning me-2 fw-bold"></i> Detailed upfront line-item scopes & estimates</li>
-            <li class="mb-2"><i class="bi bi-check2-square text-warning me-2 fw-bold"></i> Dedicated single point of contact from start to finish</li>
-            <li class="mb-2"><i class="bi bi-check2-square text-warning me-2 fw-bold"></i> Strict adherence to OSHA safety & Florida code standards</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Featured Projects Placeholder -->
-  <section id="projects" class="py-5">
-    <div class="container py-4">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold text-navy">Capabilities & Focus Areas</h2>
-        <p class="text-muted">Serving homeowners, commercial property managers, and municipal partners.</p>
-      </div>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card border-0 shadow-sm h-100">
-            <img src="https://unsplash.com" class="card-img-top" alt="Interior Renovation">
-            <div class="card-body">
-              <span class="badge bg-navy mb-2">Residential</span>
-              <h5 class="card-title fw-bold">Interior & Structural Renovations</h5>
-              <p class="card-text text-muted small">Kitchens, baths, flooring, framing, and full home modernizations.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card border-0 shadow-sm h-100">
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="brand">
+        <img src="logo.png" alt="Cross Sabers Solutions LLC" class="nav-logo" onerror="this.style.display='none'">
+        <span>CROSS SABERS SOLUTIONS LLC</span>
