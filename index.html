@@ -45,7 +45,6 @@
       padding: 0 20px;
     }
 
-    /* Navigation */
     .navbar {
       background-color: var(--brand-dark);
       color: #ffffff;
@@ -100,7 +99,6 @@
       color: var(--brand-gold);
     }
 
-    /* Buttons */
     .btn {
       display: inline-block;
       padding: 12px 24px;
@@ -140,7 +138,6 @@
       font-size: 0.9rem;
     }
 
-    /* Hero Section */
     .hero {
       background: radial-gradient(circle at top right, #263142 0%, var(--brand-dark) 65%);
       color: #ffffff;
@@ -203,7 +200,6 @@
       box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
     }
 
-    /* Trust Strip */
     .trust-strip {
       background-color: var(--bg-light);
       border-bottom: 1px solid #e2e8f0;
@@ -229,7 +225,6 @@
       font-size: 0.88rem;
     }
 
-    /* Sections */
     .section {
       padding: 70px 0;
     }
@@ -256,7 +251,6 @@
       font-size: 1.05rem;
     }
 
-    /* Cards Grid */
     .cards-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -297,7 +291,6 @@
       font-size: 0.95rem;
     }
 
-    /* About Section */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -364,7 +357,6 @@
       margin-right: 8px;
     }
 
-    /* Contact Section */
     .contact-section {
       background-color: var(--brand-dark);
       color: #ffffff;
@@ -448,7 +440,6 @@
       border-color: var(--brand-crimson);
     }
 
-    /* Footer */
     footer {
       background-color: #0b0e12;
       color: #94a3b8;
@@ -464,7 +455,6 @@
       margin-bottom: 6px;
     }
 
-    /* Responsive */
     @media (max-width: 860px) {
       .hero-grid,
       .cards-grid,
@@ -487,9 +477,13 @@
 </head>
 <body>
 
-  <!-- Navigation -->
   <nav class="navbar">
     <div class="container nav-inner">
       <a href="#" class="brand">
         <img src="logo.png" alt="Cross Sabers Solutions LLC" class="nav-logo" onerror="this.style.display='none'">
         <span>CROSS SABERS SOLUTIONS LLC</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#capabilities">Capabilities</a></li>
